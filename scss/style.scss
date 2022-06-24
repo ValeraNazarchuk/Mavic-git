@@ -5,3 +5,57 @@
 @import "mixin";
 @import "extend";
 @import "media";
+
+
+.header{
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %ff-medium;
+  }
+
+  &__btn{
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    padding: 7px 28px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  &__phone{
+    font-size: 16px;
+    line-height: 18px;
+    @extend %ff-bolt;
+  }
+}
+
+.menu{
+  
+  &__list-item{
+    display: inline-block;
+    & + .menu__list-item{
+      padding-left: 20px;
+    }
+  }
+}
+
+.top{
+  background-image: url(../images/top/top-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-nav ul {
+ul {
   list-style: none;
 }
 
@@ -94,24 +94,38 @@ input, select {
 }
 
 @font-face {
-  font-family: "Lato";
-  font-weight: 900;
+  font-family: "SFProDisplay-Semibold";
+  font-weight: 600;
   font-style: normal;
-  src: local("Lato"), url("") format("woff2"), url("") format("woff"), url("") format("eot");
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Lato";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Lato"), url("") format("woff2"), url("") format("woff"), url("") format("eot");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lato";
+  font-family: "SFProDisplay-Regular";
   font-weight: 400;
   font-style: normal;
-  src: local("Lato"), url("") format("woff2"), url("") format("woff"), url("") format("eot");
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ubuntu-Bolt";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/AnyConv.com__Ubuntu-Bold.woff2") format("woff2"), url("../fonts/AnyConv.com__Ubuntu-Bold.woff2") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ubuntu-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/AnyConv.com__Ubuntu-Medium.woff2") format("woff2"), url("../fonts/AnyConv.com__Ubuntu-Medium.woff2") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ubuntu-Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/AnyConv.com__Ubuntu-Light.woff2") format("woff2"), url("../fonts/AnyConv.com__Ubuntu-Light.woff") format("woff");
   font-display: swap;
 }
 *,
@@ -134,6 +148,8 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #fff;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .page-section {
@@ -154,10 +170,9 @@ body {
 }
 
 .title {
-  font-family: sans-serif;
-  font-weight: 400;
   font-size: 44px;
   line-height: 53px;
+  padding-left: 25px;
 }
 
 .scroll__btn {
@@ -167,4 +182,69 @@ body {
   bottom: 0px;
   left: 0px;
   right: 0px;
+}
+
+.title {
+  font-family: "SFProDisplay-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.header__phone {
+  font-family: "ubuntu-Bolt", sans-serif;
+  font-weight: 700;
+}
+
+.header__inner {
+  font-family: "ubuntu-Medium", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: "ubuntu-Light", sans-serif;
+  font-weight: 300;
+}
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 17px;
+}
+.header__btn {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 7px 28px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.header__phone {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.menu__list-item {
+  display: inline-block;
+}
+.menu__list-item + .menu__list-item {
+  padding-left: 20px;
+}
+
+.top {
+  background-image: url(../images/top/top-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

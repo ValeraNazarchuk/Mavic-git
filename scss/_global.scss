@@ -8,6 +8,7 @@ html{
   scroll-behavior: smooth;
 }
 
+
 a{
   color: inherit;
   text-decoration: none;
@@ -18,6 +19,9 @@ body{
   overflow-x: hidden;
   position: relative;
   color: #fff;
+  @extend %ff-light;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .page-section{
@@ -38,10 +42,10 @@ body{
 }
 
 .title{
-  font-family: sans-serif;
-  font-weight: 400;
+  @extend %ff-regular;
   font-size: 44px;
   line-height: 53px;
+  padding-left: 25px;
 }
 
 .scroll__btn{
