@@ -180,52 +180,52 @@
   }
 
   &__item{
-    margin-bottom: 113px;
+    margin-bottom: 100px;
     display: flex;
     &:nth-child(even){
-      margin: 15px 0px 100px 35px;
+      margin: 15px 0px 85px 35px;
     }
-  }
-  
-  &__item-1{
-    position: relative;
-    margin-left: 25px;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 245px;
-      height: 47px;
-      right: -50px;
-      top: 30px;
-      background-image: url(../images/benefits/line1.svg);
-      background-repeat: no-repeat;
+
+    &:first-child{
+      position: relative;
+      margin-left: 25px;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 245px;
+        height: 47px;
+        right: -50px;
+        top: 30px;
+        background-image: url(../images/benefits/line1.svg);
+        background-repeat: no-repeat;
+      }
     }
-  }
-  &__item-2{
-    position: relative;
-    &::after{
-      content: '';
-      position: absolute;
-      width: 463px;
-      height: 63px;
-      left: -78%;
-      bottom: -75px;
-      background-image: url(../images/benefits/line2.svg);
-      background-repeat: no-repeat;
+    &:nth-child(2){
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 463px;
+        height: 63px;
+        left: -78%;
+        bottom: -75px;
+        background-image: url(../images/benefits/line2.svg);
+        background-repeat: no-repeat;
+      }
     }
-  }
-  &__item-3{
-    position: relative;
-    margin-left: 55px;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 254px;
-      height: 40px;
-      right: -55px;
-      top: 40px;
-      background-image: url(../images/benefits/line3.svg);
-      background-repeat: no-repeat;
+    &:nth-child(3){
+      position: relative;
+      margin-left: 55px;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 254px;
+        height: 40px;
+        right: -55px;
+        top: 40px;
+        background-image: url(../images/benefits/line3.svg);
+        background-repeat: no-repeat;
+      }
     }
   }
   
@@ -268,4 +268,167 @@
       line-height: 20px;
     }
   }
+}
+
+.specification{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 77px;
+  }
+
+  &__item{
+    &:first-child{
+      margin-left: 45px;
+    }
+  }
+
+  &__box{
+    max-width: 280px;
+    position: relative;
+    margin-top: 10px;
+    // &:last-child{
+    //   margin-top: 160px;
+    // }
+  }
+
+  &__box-2{
+    margin-top: 140px;
+  }
+  &__box-4{
+    margin-top: 160px;
+  }
+
+  &__box-1{
+    &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/specification/pointer-1.svg);
+    background-repeat: no-repeat;
+    width: 229px;
+    height: 115px;
+    top: 10px;
+    right: -180px;
+    }
+  }
+  &__box-2{
+    &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/specification/pointer-2.svg);
+    background-repeat: no-repeat;
+    width: 347px;
+    height: 81px;
+    top: -65px;
+    right: -315px;
+    }
+  }
+  &__box-3{
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/specification/pointer-3.svg);
+      background-repeat: no-repeat;
+      width: 258px;
+      height: 104px;
+      bottom: -20px;
+      left: -270px;
+    }
+  }
+  &__box-4{
+    &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/specification/pointer-4.svg);
+    background-repeat: no-repeat;
+    width: 123px;
+    height: 89px;
+    top: -73px;
+    left: -130px;
+    }
+  }
+
+  &__title{
+    @extend %ff-bolt;
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+
+  &__text{
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+
+.question{
+
+  &__items{
+    max-width: 757px;
+    padding:40px 0px 10px;
+  }
+  
+  &__item{
+    max-width: 690px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    &:nth-child(3)::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/question/question-dron.png);
+      background-repeat: no-repeat;
+      width: 320px;
+      height: 125px;
+      right: -392px;
+      top: -33px;
+      }
+
+    & + .question__item{
+      margin-top: 5px;
+    }
+
+    &-title{
+      font-size: 21px;
+      line-height: 28px;
+      @extend %ff-medium;
+      color: rgba(#fff, 0.8);
+      padding: 20px 10px 24px 40px;
+      position: relative;
+      cursor: pointer;
+
+      &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/question/acord-bottom.svg);
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-position: center;
+        width: 72px;
+        height: 67px;
+        top: 0;
+        right: -72px;
+      }
+    }
+    
+    &-text{
+      padding: 0 5px 75px 50px;
+      font-size: 15px;
+      line-height: 22px;
+      display: none;
+    }
+  }
+  
+  &__item.question__item--active{
+    .question__item-title::before{
+        transform: rotate(180deg);
+    }
+    .question__item-text{
+      display: block;
+    }
+  }
+}
+
+.contacts{
+  
 }
