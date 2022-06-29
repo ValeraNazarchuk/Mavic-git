@@ -430,5 +430,142 @@
 }
 
 .contacts{
+
+  &__inner{
+    display: flex;
+    margin: 55px 0px 0px 55px;
+  }
+
+  &__info-list{
+    margin-right: 60px;
+  }
+
+  &__info-item{
+    display: flex;
+    flex-direction: column;
+    
+    & + .contacts__info-item{
+      margin-top: 30px;
+    }
+    :last-child{
+      margin-top: 5px;
+    }
+  }
   
+  &__info-title{
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ff-bolt;
+    margin-bottom: 13px;
+  }
+  
+  &__info-email, &__info-phone{
+    font-size: 15px;
+    line-height: 20px;
+    transition: all .3s;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .contacts__form{
+    width: 570px;
+    margin-right: 105px;
+
+    &-title{
+      font-size: 21px;
+      line-height: 24px;
+      @extend %ff-bolt;
+      margin-bottom: 13px;
+    }
+
+    &-text{
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    &-line{
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-input,
+    &-texterea{
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 15px;
+      font-size: 13px;
+      line-height: 17px;
+      color: #FFFFFF;
+      &::placeholder{
+        color: rgba( #fff, 0.4);
+      }
+    }
+
+    &-input{
+      width: 49%;
+      &:last-child{
+        margin-left: 10px;
+      }
+    }
+      
+    &-texterea{
+      width: 100%;
+      height: 145px;
+      margin-bottom: 20px;
+      resize: none;
+    }
+
+    &-btn{
+      padding: 9px 15px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 2px;
+      @extend %ff-bolt;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover{
+        background-color: #fff;
+        color: #1c1c1c;
+      }
+    }
+  }
+
+  &__social-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  &__social-item{
+    margin: 14px 0px;
+    opacity: 0.5;
+    
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+
+  .footer{
+    position: absolute;
+    bottom: 32px;
+    right: 0;
+    left: 0;
+    &__copy{
+      font-size: 13px;
+      line-height: 17px;
+      color: rgba(#fff, 0.65);
+      text-align: right;
+    }
+  }
 }
