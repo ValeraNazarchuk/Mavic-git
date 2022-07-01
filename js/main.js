@@ -10,4 +10,22 @@ $(function(){
     $('.question__item').removeClass('question__item--active');
     $(this).parent().addClass('question__item--active');
   })
+
+  // $('#fullpage').fullpage({
+	// 	autoScrolling:true,
+	// 	scrollHorizontally: true,
+  //   sectionSelector: '.page-section'
+	// });
+
+  //--------------------BURGER-------------------------
+
+  $('.menu__burger').on('click', function(){
+    $('.menu__burger').toggleClass('menu__burger--active');
+    $('.menu__list').toggleClass('menu__list--active');
+  })
+
+  $('.menu__list-item').on('click', function(){
+    $('.menu__burger').removeClass('menu__burger--active');
+    $('.menu__list').removeClass('menu__list--active');
+  })
 });

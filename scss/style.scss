@@ -5,7 +5,7 @@
 @import "vars";
 @import "mixin";
 @import "extend";
-@import "media";
+
 
 
 .header{
@@ -34,7 +34,6 @@
     padding: 7px 28px;
     text-transform: uppercase;
     border-radius: 3px;
-    margin-right: 8px;
     cursor: pointer;
     transition: all .4s;
     letter-spacing: 0.03em;
@@ -45,6 +44,7 @@
   }
 
   &__phone{
+    margin-left: 8px;
     font-size: 16px;
     line-height: 18px;
     @extend %ff-bolt;
@@ -55,9 +55,17 @@
   
   &__list-item{
     display: inline-block;
+
     & + .menu__list-item{
       padding-left: 20px;
     }
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__list-phone{
+    display: none;
   }
 }
 
@@ -151,7 +159,7 @@
 
   .slider__btn{
     position: absolute;
-    bottom: -47px;
+    bottom: -48px;
     right: 0;
     padding: 16px 26px;
     border: none;
@@ -569,3 +577,5 @@
     }
   }
 }
+
+@import "media";
