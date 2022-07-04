@@ -476,8 +476,8 @@
     }
   }
 
-  .contacts__form{
-    width: 570px;
+  &__form{
+    max-width: 570px;
     margin-right: 105px;
 
     &-title{

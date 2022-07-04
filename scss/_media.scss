@@ -84,6 +84,31 @@
   .benefits__info{
     margin-top: -40px;
   }
+
+  //-------------------SPECIFICATION----------------
+  .specification__inner{
+    margin-top: 15px;
+  }
+
+    .specification__box-2{
+      margin-top: 70px;
+      &::before{
+        top: -50px;
+      }
+    }
+  
+    .specification__box-4{
+      margin-top: 70px;
+    }
+  
+    .specification__item:nth-child(2){
+      text-align: center;
+      img{
+        width: 100%;
+        margin-top: -25px;
+      }
+    }
+
 }
 
 //----------------------MEDIA-1100---------------
@@ -227,6 +252,47 @@
   .benefits__info{
     max-width: 45%;
   }
+
+  //-------------------SPECIFICATION----------------
+
+  .specification__box-3{
+    &::before{
+      width: 180px;
+      height: 104px;
+      bottom: -10px;
+      left: -230px;
+    }
+  }
+
+  .specification__box-2{
+    &::before{
+      height: 79px;
+      right: -250px;
+    }
+  }
+
+  .specification__box-4{
+    &::before{
+      top: -50px;
+    }
+  }
+
+  //----------------------QUESTION-------------
+
+  .question{
+    .title{
+      padding-top: 20px;
+    }
+  }
+
+  .question__item:nth-child(3)::before{
+    display: none;
+  }
+
+  .question__item-text{
+    padding-bottom: 20px;
+  }
+
 }
 
 //---------------------MEDIA-1024---------------
@@ -268,6 +334,121 @@
   .products__slider{
     margin: 0 auto;
   }
+
+  //----------------SPECIFICATION----------------
+
+  .specification__box-1,
+  .specification__box-2,
+  .specification__box-3,
+  .specification__box-4{
+    &::before{
+      display: none;
+    }
+  }
+
+  .specification__box-2,
+  .specification__box-4{
+    margin-top: 40px;
+  }
+
+  .specification__item:first-child {
+  margin-left: 10px; 
+  }
+
+  .specification__title {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  //------------------CONTACTS-----------------
+
+  .contacts{
+    .title{
+      padding-top: 20px;
+    }
+
+    &__inner{
+      display: block;
+      margin: 10px 0 0 10px;
+    }
+
+    &__info-list{
+      margin-bottom: 10px;
+    }
+
+    &__info-item{
+      & + .contacts__info-item{
+        margin: 5px;
+      }
+    }
+    &__form{
+      max-width: 100%;
+      margin: 0 0 10px;
+    }
+
+    &__social-list{
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__social-item{
+      margin: 0 10px;
+    }
+  }
+
+}
+
+//--------------------MEDIA-750----------------
+@media (max-width: 780px){
+
+  .specification__inner{
+    display: block;
+  }
+
+  .specification__item:first-child{
+    margin-left: 0px;
+  }
+  .specification__item:nth-child(2){
+    img{
+      width: 70%;
+      margin-top: 0px;
+    }
+  }
+
+  .specification__box{
+    max-width: 100%;
+  }
+
+//-------------------QUESTION------------------
+
+  .question__items{
+    padding-top: 15px;
+  }
+
+  .question__item{
+    max-width: 455px;
+  }
+
+  .question__item-title {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  .question__item-text{
+    padding: 17px 15px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .question__item-title::before {
+    content: "";
+    width: 45px;
+    height: 40px;
+    right: -45px;
+}
 
 }
 
@@ -359,5 +540,90 @@
       width: 150px;
       height: 100px;
     }
+  }
+
+  //-----------------SPECIFICATION----------------
+
+  .specification__box-2,
+  .specification__box-4 {
+    margin-top: 10px;
+  }
+
+  .specification__title{
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .specification__text{
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  //----------------QUESTION--------------------
+
+  .question__item {
+    max-width: 395px;
+  }
+
+  .question__item-title{
+    padding: 5px 45px 5px 5px;
+    font-size: 14px;
+    line-height: 16px;
+    &::before{
+      right: 0;
+      width: 35px;
+      height: 25px;
+    }
+  }
+
+  .question__item-text{
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  //---------------------CONTACTS--------------
+
+  .contacts__info-title {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+
+  .contacts__info-email, .contacts__info-phone {
+    font-size: 14px;
+    line-height: 17px;
+    transition: all 0.3s;
+  }
+
+  .contacts__form-title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  .contacts__form-line{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .contacts__form-input{
+    display: block;
+    width: 100%;
+
+    & + .contacts__form-input{
+      margin: 5px 0 0;
+    }
+  }
+
+  .contacts__form-texterea{
+    margin-bottom: 5px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 415px){
+
+  .question__item-text{
+    padding: 12px 5px;
   }
 }
